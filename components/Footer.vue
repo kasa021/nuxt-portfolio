@@ -1,5 +1,5 @@
 <template>
-  <footer>
+  <footer class="footer-1">
     <p>Kasa</p>
   </footer>
 </template>
@@ -11,14 +11,10 @@
     flex-direction: column;
 }
 
-footer {
+.footer-1 {
       /*footerの装飾*/
     width: 100%;
-
     text-align: center;
     padding: 8px 0;
-
-    position: absolute;
-    bottom: 0;
 }
 </style>

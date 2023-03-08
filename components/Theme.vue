@@ -1,11 +1,10 @@
 <template>
-  <div>
+  <div >
     <ul>Color mode: {{ $colorMode.value }}</ul>
-    <select v-model="$colorMode.preference">
+    <select v-model="$colorMode.preference" class="select-color">
       <option value="system">System</option>
       <option value="light">Light</option>
       <option value="dark">Dark</option>
-      <option value="sepia">Sepia</option>
     </select>
   </div>
 </template>
@@ -27,8 +26,14 @@ body {
   color: #ebf4f1;
 }
 
-.sepia-mode body {
-  background-color: #f1e7d0;
-  color: #433422;
+.select-color {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  color: rgba(0, 0, 0, 0.8);
 }
+
 </style>
