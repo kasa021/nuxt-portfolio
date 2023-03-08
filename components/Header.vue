@@ -1,9 +1,9 @@
 <template>
-  <header class="headerHeight">
-    <div>
+  <header>
+    <div class="wapper">
       <Nav />
-      <div class="border-top-black-1 text-center p-3 mb-5">
-        <h1 class="display-2 welcon-sentens">
+      <div class="border-top-black-1">
+        <h1 class="welcon-sentens">
           <span>
             Welcom to Kasa's
             <span>
@@ -31,8 +31,10 @@
   width: 100%;
 }
 
-.headerHeight {
-  height: calc(100vh - 60px);
+.wapper{
+  max-width: auto;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 
 </style>
