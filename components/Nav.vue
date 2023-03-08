@@ -1,9 +1,8 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container-fluid px-5">
       <NuxtLink class="navbar-brand" to="/">Kasa</NuxtLink>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" >
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -12,13 +11,11 @@
             <NuxtLink class="nav-link active" to="/">Home</NuxtLink>
           </li>
           <li class="nav-item">
-            <NuxtLink class="nav-link" to="/second">About</NuxtLink>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled">Disabled</a>
+            <NuxtLink class="nav-link active" to="/about">About</NuxtLink>
           </li>
         </ul>
       </div>
+      <theme />
     </div>
   </nav>
 </template>
