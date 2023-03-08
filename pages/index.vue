@@ -1,7 +1,7 @@
 <template>
   <Introduction />
   <Technologeis />
-  <PersonalProjects />
+  <ProjectSection />
 </template>
 
 
