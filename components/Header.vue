@@ -7,7 +7,7 @@
           <span>
             Welcom to Kasa's
             <span>
-              <IconsIconUmbrella />
+              <IconUmbrella />
             </span>
             portfolio
           </span>
