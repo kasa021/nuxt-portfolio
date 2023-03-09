@@ -22,16 +22,13 @@
   
 }
 
-
 .welcome-sentens{
-  /* background-color: antiquewhite; */
   position: relative;
   margin-top: 15%;
   width: 100%;
 }
 
-/* welcome-sentensをwapperの中央に表示 */
-.welcon-sentens {
+.welcome-sentens {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -41,6 +38,29 @@
   text-align: center;
   margin-bottom: 2rem;
 }
+
+/* welcome-sentensをアニメーションをつけてスライドインさせる*/
+.welcome-sentens span {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom;
+  white-space: nowrap;
+  transform: translate3d(0, 100%, 0);
+  animation: slideIn 1s ease forwards;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translate3d(0, 100%, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+
+
+
 
 .wapper{
   margin: 0 auto;
