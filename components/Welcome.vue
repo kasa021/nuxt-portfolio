@@ -21,17 +21,20 @@
   border-top: 1px solid rgb(158, 139, 139);
   
 }
-
-.welcon-sentens{
-  /* background-color: antiquewhite; */
-  position: relative;
-  margin-top: 15%;
-  width: 100%;
+/* welcome-sentensをwapperの中央に表示 */
+.welcon-sentens {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  font-weight: 700;
   text-align: center;
+  margin-bottom: 2rem;
 }
 
 .wapper{
-  max-width: auto;
+  position: relative;
   margin: 0 auto;
   padding: 0 15px;
   height: 100vh; 
