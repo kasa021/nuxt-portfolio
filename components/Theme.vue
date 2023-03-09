@@ -1,11 +1,15 @@
 <template>
-  <div >
-    <ul>Color mode: {{ $colorMode.value }}</ul>
-    <select v-model="$colorMode.preference" class="select-color">
-      <option value="system">System</option>
-      <option value="light">Light</option>
-      <option value="dark">Dark</option>
-    </select>
+  <div>
+    <div v-if="colorMode.preference === 'light'">
+      <button class="select-color" @click="colorMode.preference = 'dark'">
+        <IconLight />
+      </button>
+    </div>
+    <div v-else>
+      <button class="select-color" @click="colorMode.preference = 'light'">
+        <iconDark />
+      </button>
+    </div>
   </div>
 </template>
 
@@ -26,6 +30,11 @@ body {
   color: #ebf4f1;
 }
 
+.dark-mode .select-color {
+  background-color: #091a28;
+  color: #ebf4f1;
+}
+
 .select-color {
   margin-top: 10px;
   margin-bottom: 10px;
@@ -35,5 +44,4 @@ body {
   background-color: #fff;
   color: rgba(0, 0, 0, 0.8);
 }
-
 </style>

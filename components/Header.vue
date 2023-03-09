@@ -15,8 +15,10 @@
           <NuxtLink to="/contact">Contact</NuxtLink>
         </li>
         <li class="menu__item">
-          <Theme />
+          <!-- <Theme /> -->
+          <!-- <ColorModePicker /> -->
         </li>
+        <Theme />
       </ul>
     </nav>
   </header>
