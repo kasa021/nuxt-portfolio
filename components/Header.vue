@@ -28,6 +28,8 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 20px;
+  position: fixed;
+  width: 100vw;
 }
 
 .header__logo {
@@ -39,6 +41,8 @@
 .menu {
   display: flex;
   list-style: none;
+  margin-right: 72px;
+  align-items: center;
 }
 
 .menu__item {
