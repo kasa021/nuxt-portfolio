@@ -5,7 +5,7 @@
         <IconLight />
       </button>
     </div>
-    <div v-else>
+    <div v-else-if="colorMode.preference === 'dark'">
       <button class="select-color" @click="colorMode.preference = 'light'">
         <iconDark />
       </button>
