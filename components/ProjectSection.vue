@@ -109,7 +109,7 @@ const projects: Project[] = [
 
 /* project-absoluteを画面の中央に配置する */
 .project-absolute {
-  position: absolute;
+  position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -130,14 +130,22 @@ const projects: Project[] = [
 
 .project-absolute:hover .project-description {
   display: block;
+  position : absolute;
+  right : 160px;
 }
 
 .project-absolute:hover .project-tech {
-  display: block;
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  bottom : 0;
 }
 
 .project-absolute:hover .project-links {
-  display: block;
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  right : 0;
 }
 
 .project-name {
@@ -159,15 +167,15 @@ const projects: Project[] = [
 
 .project-tech {
   display: none;
+  
 }
 
 .project-tech-item {
-  display: inline-block;
-  margin-right: 1rem;
-  padding: 0.5rem 1rem;
+  display: flex;
   border-radius: 6px;
   color: #fff;
-  margin : 0 auto;
+  margin : 0 0;
+  width: 80px;
 }
 
 .project-links {
