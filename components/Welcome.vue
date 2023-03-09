@@ -34,7 +34,7 @@
   max-width: auto;
   margin: 0 auto;
   padding: 0 15px;
-  height: calc(100vh - 105px);
+  height: 100vh; 
 }
 
 </style>
