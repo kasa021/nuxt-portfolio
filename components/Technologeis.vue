@@ -1,5 +1,5 @@
 <template>
-    <div id="skills">
+    <div id="Skills">
       <div class="intro-tech">
         <h2 class="techTitle">Technologies & Framework</h2>
       </div>

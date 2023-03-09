@@ -1,6 +1,6 @@
 <template>
   <secton>
-    <div>
+    <div id="About">
       <div class="text-img-block">
         <div class="leftText">
           <h2 class="profile-title">Introduction</h2>

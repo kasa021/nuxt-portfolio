@@ -6,17 +6,15 @@
     <nav>
       <ul class="menu">
         <li class="menu__item">
-          <NuxtLink to="/">Home</NuxtLink>
+          <NuxtLink href="#Home" >Home</NuxtLink>
         </li>
         <li class="menu__item">
-          <NuxtLink to="/about">About</NuxtLink>
+          <NuxtLink href="#About">About</NuxtLink>
         </li>
         <li class="menu__item">
-          <NuxtLink to="/contact">Contact</NuxtLink>
+          <NuxtLink href="#Skills">Skills</NuxtLink>
         </li>
         <li class="menu__item">
-          <!-- <Theme /> -->
-          <!-- <ColorModePicker /> -->
         </li>
         <Theme />
       </ul>
