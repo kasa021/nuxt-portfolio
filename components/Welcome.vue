@@ -2,7 +2,7 @@
   <section id="Home">
     <div class="wapper">
       <div class="border-top-black-1">
-        <h1 class="welcon-sentens">
+        <h1 class="welcome-sentens">
           <span>
             Welcome to Kasa's
             <span>
@@ -22,7 +22,7 @@
   
 }
 
-.welcon-sentens{
+.welcome-sentens{
   /* background-color: antiquewhite; */
   position: relative;
   margin-top: 15%;
@@ -31,7 +31,6 @@
 }
 
 .wapper{
-  max-width: auto;
   margin: 0 auto;
   padding: 0 15px;
   height: 100vh; 
