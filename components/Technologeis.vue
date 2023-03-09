@@ -1,5 +1,5 @@
 <template>
-    <div id="Skills">
+    <div id="Skills" class="technologies">
       <div class="intro-tech">
         <h2 class="techTitle">Technologies & Framework</h2>
       </div>
@@ -32,6 +32,10 @@ const skillSet =[
 </script>
 
 <style scoped>
+.technologies {
+  height: 30vh;
+}
+
 .techTitle {
   font-size: 2rem;
   font-weight: 700;
