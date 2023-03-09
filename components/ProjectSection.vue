@@ -14,7 +14,7 @@
             </div>
           </div>
           <div class="project-links">
-            <a :href="project.githublink" target="_blank" class="project-link">
+            <a :href="project.githublink" target="_blank" class="project-link">   
               <IconGithub />
             </a>
           </div>
@@ -85,67 +85,80 @@ const projects: Project[] = [
 
 
 
-/* projext-image とproject-absoluteの一を重ねる */
+/* projext-image とproject-absolute を画面の中央で重ねる */
 .project-relative {
   position: relative;
-  width: 600px;
+  width: 500px;
   height: 400px;
-  margin: 0 20px 20px 0;
-  border-radius: 6%;
-  overflow: hidden;
+  margin: 0 auto;
+  margin-bottom: 2rem;
 }
 
+/* project-imageを画面の中央に配置する */
 .project-image {
-  width: 600px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
   height: 400px;
-  object-fit: cover;
+  object-fit: none;
   object-position: 50% 50%;
   border-radius: 6%;
 }
 
+/* project-absoluteを画面の中央に配置する */
 .project-absolute {
-  display: flex;
   position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  padding: 10px;
-  color: #fff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 400px;
+  padding: 1rem;
   background: rgba(0, 0, 0, .6);
-  font-size: 18px;
-  font-weight: bold;
-  text-align: center;
+  border-radius: 6%;
 }
-/* .project-absoluteをhoverするとproject-description project-tech のみ表示される,hoverしていないとproject-nameのみ表示する*/
-.project-absolute:hover .project-description,
-.project-absolute:hover .project-tech {
-  display: block;
-}
+
+
+
+/* When project-absolute is hovered, only project-description and project-tech are displayed, when not hovered, only project-name is displayed.*/
 
 .project-absolute:hover .project-name {
   display: none;
 }
 
-.project-name {
+.project-absolute:hover .project-description {
   display: block;
-  margin-bottom: 1rem;
+}
+
+.project-absolute:hover .project-tech {
+  display: block;
+}
+
+.project-absolute:hover .project-links {
+  display: block;
+}
+
+.project-name {
   font-size: 1.5rem;
   font-weight: 700;
+  margin-bottom: 1rem;
+  display: block;
+  text-align: center;
+  color: #fff;
 }
 
 .project-description {
-  display: none;
+  font-size: 1rem;
+  font-weight: 400;
   margin-bottom: 1rem;
-  font-size: 1.2rem;
-  font-weight: 500;
+  display: none;
+  color: #fff;
 }
 
 .project-tech {
   display: none;
-  margin-bottom: 1rem;
-  font-size: 1.2rem;
-  font-weight: 500;
 }
 
 .project-tech-item {
@@ -153,34 +166,27 @@ const projects: Project[] = [
   margin-right: 1rem;
   padding: 0.5rem 1rem;
   border-radius: 6px;
-  background: #fff;
-  color: #000;
+  color: #fff;
+  margin : 0 auto;
 }
 
 .project-links {
-  display: flex;
-  justify-content: flex-end;
+  display: none;
 }
 
 .project-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  margin-left: 1rem;
-  border-radius: 50%;
-  background: #fff;
-  color: #000;
-}
-
-.project-link:hover {
-  background: #000;
+  display: inline-block;
+  margin-right: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
   color: #fff;
 }
 
-
-
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  grid-gap: 2rem;
+}
 
 
 
