@@ -6,7 +6,7 @@
           <h2 class="profile-title">Introduction</h2>
           <div class="profile-description-container">
             <p class="profile-description">
-              こんにちは、Kasaです。現在はフロントエンドエンジニアとして働いています。
+              こんにちは、Kasaです。現在はフロントエンドエンジニアとして働いていません。
               このポートフォリオサイトは、Nuxt.jsとTailwind CSSを使って作成しました。
               プログラミングは競技プログラミングから始めました。最近は、webアプリケーションの開発に興味があり、
               勉強している最中です。
