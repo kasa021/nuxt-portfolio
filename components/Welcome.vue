@@ -22,12 +22,24 @@
   
 }
 
+
 .welcome-sentens{
   /* background-color: antiquewhite; */
   position: relative;
   margin-top: 15%;
   width: 100%;
+}
+
+/* welcome-sentensをwapperの中央に表示 */
+.welcon-sentens {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  font-weight: 700;
   text-align: center;
+  margin-bottom: 2rem;
 }
 
 .wapper{
