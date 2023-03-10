@@ -2,7 +2,7 @@
   <secton>
     <div id="About">
       <div class="text-img-block">
-        <div class="leftText">
+        <div class="leftText" ref="targetText">
           <h2 class="profile-title">Introduction</h2>
           <div class="profile-description-container">
             <p class="profile-description">
@@ -12,7 +12,7 @@
               勉強している最中です。
             </p>
             <p>hello</p>
-            <div class="social-icons">
+            <div class="social-icons" ref="targetSocialIcon">
               <a  aria-label="Instagram" target="_blank" class="social-link">
                 <IconInstagram />
               </a>
@@ -28,7 +28,7 @@
           </div>
         </div>
 
-        <div class="img-icon">
+        <div class="img-icon" ref="targetImgIcon">
           <img src="./icon/cloud-g6fd602bff_640.jpg" alt="profile image" />
         </div>
       </div>
@@ -36,13 +36,53 @@
   </secton>
 </template>
 
+<script setup lang="ts">
+import { ref, onMounted } from 'vue'
+import { useIntersectionObserver } from '~~/composables/useIntersectonObserver';
+
+const targetText = ref<HTMLElement | null>(null);
+const targetSocialIcon = ref<HTMLElement | null>(null);
+const targetImgIcon = ref<HTMLElement | null>(null);
+
+const elements = [targetText, targetSocialIcon, targetImgIcon];
+
+onMounted(() =>{
+  useIntersectionObserver().doObserve(elements)
+})
+
+
+</script>
+
+
+
 <style scoped>
+/* text-img-block横からスライドインさせるアニメーションを追加 */
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
 
 .social-icons{
   display: flex;
   gap: 20px;
   align-items: center;
 
+}
+
+.leftText .-intersecting{
+  animation: slideIn 1s ease-in-out;
+}
+.social-icons .-intersecting{
+  animation: slideIn 1s ease-in-out;
+}
+
+.img-icon .-intersecting{
+  animation: slideIn 1s ease-in-out;
 }
 
 .light-mode .social-link svg {
@@ -64,7 +104,12 @@
   align-items: center;
   margin: 0 20%;
   height: 100vh;
+
 }
+
+
+
+
 
 img {
   width: 300px;
@@ -90,10 +135,5 @@ img {
   line-height: 1.875rem;
 }
 
-/* .leftText {
-  margin-top: 10%;
-  margin-bottom: 10%;
-  margin-left: 10%;
-  margin-right: 10%
-} */
+
 </style>
