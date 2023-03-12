@@ -1,8 +1,8 @@
 <template>
   <secton>
     <div id="About">
-      <div class="text-img-block">
-        <div class="leftText" ref="targetText">
+      <div class="text-img-block ">
+        <div class="leftText -once" ref="targetText">
           <h2 class="profile-title">Introduction</h2>
           <div class="profile-description-container">
             <p class="profile-description">
@@ -12,7 +12,7 @@
               勉強している最中です。
             </p>
             <p>hello</p>
-            <div class="social-icons" ref="targetSocialIcon">
+            <div class="social-icons -once" ref="targetSocialIcon">
               <a  aria-label="Instagram" target="_blank" class="social-link">
                 <IconInstagram />
               </a>
@@ -28,7 +28,7 @@
           </div>
         </div>
 
-        <div class="img-icon" ref="targetImgIcon">
+        <div class="img-icon -once" ref="targetImgIcon">
           <img src="./icon/cloud-g6fd602bff_640.jpg" alt="profile image" />
         </div>
       </div>
@@ -74,14 +74,7 @@ onMounted(() =>{
 
 }
 
-.leftText .-intersecting{
-  animation: slideIn 1s ease-in-out;
-}
-.social-icons .-intersecting{
-  animation: slideIn 1s ease-in-out;
-}
-
-.img-icon .-intersecting{
+.text-img-block .-intersecting{
   animation: slideIn 1s ease-in-out;
 }
 
